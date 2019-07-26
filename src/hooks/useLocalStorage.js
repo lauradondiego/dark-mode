@@ -1,10 +1,8 @@
 import { useState } from "react";
 
-import "./styles.scss";
-
 export const useLocalStorage = (key, initialValue) => {
   // you need a key and a value to set something to local storage
-
+  console.log("key value", key, initialValue);
   const [storedValue, setStoredValue] = useState(() => {
     // Get from local storage by key
     const item = window.localStorage.getItem(key);
